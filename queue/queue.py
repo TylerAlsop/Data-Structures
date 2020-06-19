@@ -1,5 +1,5 @@
-# from singly_linked_list_queue import Node
-# from singly_linked_list_queue import LinkedList
+import unittest
+
 
 """
 A queue is a data structure whose primary purpose is to store and
@@ -17,7 +17,8 @@ Stretch: What if you could only use instances of your Stack class to implement t
          What would that look like? How many Stacks would you need? Try it!
 """
 
-
+# from singly_linked_list_queue import Node
+# from singly_linked_list_queue import LinkedList
 
 ############ Array Implementation ############
 class Queue:
@@ -26,12 +27,14 @@ class Queue:
         self.storage = []
     
     def __len__(self):
-        return len(self.storage)
+        return self.size
 
     def enqueue(self, value):
+        self.size += 1
         self.storage.append(value)
 
     def dequeue(self):
+        self.size -= 1
         self.storage.pop(0)
 
 
