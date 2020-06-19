@@ -1,7 +1,5 @@
 import unittest
 
-
-
 """
 A stack is a data structure whose primary purpose is to store and
 return elements in Last In First Out order. 
