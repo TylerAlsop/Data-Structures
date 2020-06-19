@@ -1,4 +1,4 @@
-import unittest
+# import unittest
 
 
 """
@@ -34,8 +34,12 @@ class Queue:
         self.storage.append(value)
 
     def dequeue(self):
+        if len(self.storage) == 0:
+            return None
+
         self.size -= 1
-        self.storage.pop(0)
+        value = self.storage.pop(0)
+        return value
 
 
 ############ LinkedList Implementation ############
