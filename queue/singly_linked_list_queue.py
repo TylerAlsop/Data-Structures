@@ -8,6 +8,14 @@ class LinkedList:
     def __init__(self):
         self.head = None # Stores a node, that corresponds to our first node in the list 
         self.tail = None # stores a node that is the end of the list
+
+    # Return all values in the list a -> b -> c -> d -> None
+    def __str__(self):
+        output = ''
+        current_node = self.head # Create a tracker node variable
+        while current_node is not None: # Loop until it's done
+            output =+ f'{current_node.value} -> '
+            current_node = current_node.next_node # update the tracker node to the next node
   
     def add_to_head(self, value):
         # create a node to add
