@@ -1,4 +1,6 @@
-# import unittest
+import unittest
+
+
 
 """
 A stack is a data structure whose primary purpose is to store and
@@ -40,21 +42,21 @@ from singly_linked_list import LinkedList
 
 
 ############ LinkedList Implementation ############
-# class Stack:
-#     def __init__(self):
-#         self.size = 0
-#         self.storage = LinkedList()
+class Stack:
+    def __init__(self):
+        self.size = 0
+        self.storage = LinkedList()
 
-#     def __len__(self):
-#         return self.size
+    def __len__(self):
+        return self.size
 
-#     def push(self, value):
-#         self.storage.add_to_head(value)
-#         self.size += 1
+    def push(self, value):
+        self.storage.add_to_head(value)
+        self.size += 1
 
-#     def pop(self):
-#         if self.size == 0:
-#             return None
-#         else:
-#             self.size -= 1
-#             return self.storage.remove_head()
+    def pop(self):
+        if self.size == 0:
+            return None
+        else:
+            self.size -= 1
+            return self.storage.remove_head()
