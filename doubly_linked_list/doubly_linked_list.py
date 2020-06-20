@@ -44,16 +44,28 @@ class DoublyLinkedList:
     def __len__(self):
         return self.length
 
+    def __str__(self):
+        output = ''
+        current_node = self.head
+        while current_node is not None:
+            output += f'STR METHOD: current node value: {current_node.value} ->'
+            current_node = current_node.next
+        return output
+        # return f'STR METHOD: self.head.value: {self.head.value} ; self.tail.value: {self.tail.value} ; '
+
     """Wraps the given value in a ListNode and inserts it 
     as the new head of the list. Don't forget to handle 
     the old head node's previous pointer accordingly."""
     def add_to_head(self, value):
-        new_list_node = ListNode(self, value)
+        self.length += 1
+        new_list_node = ListNode(value)
         if self.head is None and self.tail is None:
             self.head = new_list_node
             self.tail = new_list_node
             self.head.next = self.tail
+            self.head.prev = None
             self.tail.prev = self.head
+            self.tail.next = None
         else:
             new_list_node.next = self.head
             self.head.prev = new_list_node
@@ -64,6 +76,7 @@ class DoublyLinkedList:
     current head's next node the new head of the List.
     Returns the value of the removed Node."""
     def remove_from_head(self):
+        self.length -= 1
         if not self.head:
             return None
         if self.head.next is None:
