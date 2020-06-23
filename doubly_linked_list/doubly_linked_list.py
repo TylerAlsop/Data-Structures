@@ -222,8 +222,8 @@ class DoublyLinkedList:
             return
         self.length -= 1
         if self.head == self.tail:
-            self.head == None
-            self.tail == None
+            self.head = None
+            self.tail = None
         elif self.head == node:
             self.head = node.next
             node.delete()
