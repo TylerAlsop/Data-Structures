@@ -17,23 +17,35 @@ class BSTNode:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        # take the current value of our node (self.value)    
+        # compare to the new value we want to insert
+        
+        # if new value < self.value
+            # IF self.left is already taken by a node
+                # make that (left) node, call insert 
+            # set the left to the new node with the new value
 
+            # if new value >= self.value
+            # IF self.right is already taken by a node
+                # make that (right) node call insert 
+            # set the right child to the new node with new value
+        pass
+    
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
         if self.value == target:
             return True
-        found = False
         # Compare the target to current value
-        # if current value < target
+        # If current value < target
+        found = False
         if self.value < target:
             # Check the left subtree (self.left.contains(target))
             # If you cannot go left, return False
             if self.left is None:
                 return False
             found = self.left.contains(target)
-
+            
         # If current value >= target
         if self.value >= target:
             # Check if right subtree contains target
@@ -41,7 +53,6 @@ class BSTNode:
             if self.right is None:
                 return False
             found = self.right.contains(target)
-        
         return found
 
     # Return the maximum value found in the tree
