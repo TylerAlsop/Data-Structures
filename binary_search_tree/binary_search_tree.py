@@ -48,7 +48,7 @@ class BSTNode:
         if target == self.value:
             return True
         # Compare the target to current value
-        # If current value < target
+        # If current target < value
         found = False
         if target < self.value:
             # Check the left subtree (self.left.contains(target))
@@ -57,7 +57,7 @@ class BSTNode:
                 return False
             found = self.left.contains(target)
             
-        # If current value >= target
+        # If current target >= value
         if target >= self.value:
             # Check if right subtree contains target
             # If you cannot go right, return False
