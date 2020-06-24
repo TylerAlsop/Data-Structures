@@ -84,11 +84,11 @@ class BSTNode:
             # Check of a node exists in self.left.
                 # If a node exists then call the for_each function on the value of self.left (the for_each functon will then treat that self.left node as if it is the root node).
         if self.left is not None:
-            self.left.for_each()
+            self.left.for_each(fn)
             # Check of a node exists in self.right.
                 # If a node exists then call the for_each function on the value of self.right (the for_each functon will then treat that self.right node as if it is the root node).
         if self.right is not None:
-            self.right.for_each()
+            self.right.for_each(fn)
 
     # Part 2 -----------------------
 
