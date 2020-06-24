@@ -78,8 +78,15 @@ class BSTNode:
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
+        # The user will pass in a function to this method. That function needs to be called on for the value of each and every node.
+            # Call the function on the root value.
+        fn(self.value)
+            # Check of a node exists in self.left.
+                # If a node exists then call the for_each function on the value of self.left (the for_each functon will then treat that self.left node as if it is the root node).
         if self.left is not None:
             self.left.for_each()
+            # Check of a node exists in self.right.
+                # If a node exists then call the for_each function on the value of self.right (the for_each functon will then treat that self.right node as if it is the root node).
         if self.right is not None:
             self.right.for_each()
 
