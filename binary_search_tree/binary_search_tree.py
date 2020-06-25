@@ -73,8 +73,10 @@ class BSTNode:
         if self.right is None:
             return self.value
             # If there is a node in self.right then run the get_max() function on self.right
-        else:
-            return self.right.get_max()
+        # else:
+        #     return self.right.get_max()
+        max_val = self.right.get_max()
+        return max_val
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
