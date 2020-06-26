@@ -1,3 +1,6 @@
+from queue import Queue
+from singly_linked_list import Node, LinkedList
+from stack import Stack
 """
 Binary search trees are a data structure that enforce an ordering over 
 the data they store. That ordering in turn makes it a lot more efficient 
@@ -97,16 +100,42 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+        if self.left:
+            self.left.in_order_print(node)
+
+        print(self.value)
+
+        if self.right:
+            self.right.in_order_print(node)
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
+        # Create a queue for nodes
+        # Add the first node to the queue
+        # While queue is not empty
+            # Remove the first node from the queue
+            # Print the removed node
+            # Add All Children into the queue
+            # Remove and print the first node in the queue
+            # Add the children of that node.
+            # Remove and print the next node in the queue
+            # Add the children of that node.
         pass
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
+        # Create a stack for nodes
+        # Add the first node to the stack
+        # While stack is not empty
+            # Remove the first node from the top of the stack
+            # Print the removed node
+            # Add All Children into the stack, add first the side that you don't want printed first.
+            # Remove and print the first node in the stack
+            # Add All Children into the stack, add first the side that you don't want printed first.
+            # Remove and print the next node in the stack
+            # Add the children of that node.
         pass
 
     # Stretch Goals -------------------------
