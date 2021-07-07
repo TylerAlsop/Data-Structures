@@ -1,14 +1,14 @@
 
 class Node:
-    def __init__(self, value=None, next_node=None):
-        self.value = value
-        self.next_node = next_node
+  def __init__(self, value=None, next_node=None):
+    self.value = value
+    self.next_node = next_node
   
 
 class LinkedList:
-    def __init__(self):
-        self.head = None # Stores a node, that corresponds to our first node in the list 
-        self.tail = None # stores a node that is the end of the list
+  def __init__(self):
+    self.head = None # Stores a node, that corresponds to our first node in the list 
+    self.tail = None # stores a node that is the end of the list
   
   def add_to_head(self, value):
     # create a node to add
@@ -65,7 +65,8 @@ class LinkedList:
 
       # otherwise, go to the next node
       current_node = current_node.next_node
-    return False
+    return False 
+  
 
 # example
 # linked_list = LinkedList()
